@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "Klasifikasi/Klasifikasi/klasifikasi.py",
+      "src": "klasifikasi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Klasifikasi/Klasifikasi/klasifikasi.py"
+      "dest": "klasifikasi.py"
     }
   ]
 }
