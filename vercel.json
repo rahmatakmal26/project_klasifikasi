@@ -16,6 +16,6 @@
       "dest": "klasifikasi.py"
     }
   ],
-   "buildCommand": "pip install -r requirements.txt -t .vercel/output/function",
-     "outputDirectory": ".vercel/output"
+  "buildCommand": "pip install --no-cache-dir -r requirements.txt -t .vercel_build_output && cd .vercel_build_output && find . -type d -name '__pycache__' -exec rm -rf {} + && find . -type f -name '*.py[co]' -delete && find . -type f -name '*.so' -delete && find . -type f -name '*.h5' -delete && find . -type f -name '*.pkl' -delete && cd .. && mv .vercel_build_output .vercel/output/function",
+  "outputDirectory": ".vercel/output"
 }
